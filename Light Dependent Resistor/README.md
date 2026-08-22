@@ -50,6 +50,22 @@ int ambang_batas = 500;
 void setup {
   pinMode(1, OUTPUT);
   Serial.begin(9600);
+}
+
+void loop {
+  int value = analogRead(A0);
+  Serial.print("Nilai sensor = ");
+  Serial.println(value);
+
+  if (value > ambang_batas) {
+    digitalWrite(1, HIGH);
+  } else {
+    digitalWrite(1, LOW);
+  }
+  delay(500);
+}
+```
+
 
 
 
