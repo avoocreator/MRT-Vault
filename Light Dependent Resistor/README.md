@@ -46,7 +46,7 @@ Pin analog (sering juga disebut pin ADC atau _Analog-to-Digital Converter_) adal
 #### Indikator LED sebagai visualisasi data
 Untuk menggunakan LED sebagai bentuk visualisasi (output) dari data LDR, pertama kita perlu menginisialisasi nilai ambang batas sebagai kondisi HIGH atau LOW. Selanjutnya kita bisa menggunakan fungsi if dan else untuk menentukan kapan LED akan menyala. Perhatikan kode berikut :
 ```cpp
-int ambang_batas = 500;
+int ambang_batas = 500; //nilai sensor LDR adalah 0 - 1023, sesuaikan sendiri dari rentan itu
 void setup {
   pinMode(1, OUTPUT);
   Serial.begin(9600);
@@ -57,9 +57,9 @@ void loop {
   Serial.print("Nilai sensor = ");
   Serial.println(value);
 
-  if (value > ambang_batas) {
+  if (value > ambang_batas) { //dapat dibaca: jika value lebih besar dari ambang batas, maka...
     digitalWrite(1, HIGH);
-  } else {
+  } else { //jika tidak memenuhi kondisi, maka...
     digitalWrite(1, LOW);
   }
   delay(500);
