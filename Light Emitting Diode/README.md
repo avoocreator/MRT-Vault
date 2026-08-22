@@ -12,7 +12,7 @@ LED sering digunakan sebagai indikator (_output_) atau tes _blink_. Pada LED ter
 <img width="700" height="375" alt="image" src="https://github.com/user-attachments/assets/98d4bba4-8141-4a65-9f44-5b36524df7b5" />
 
 ### LED pada Arduino
-Pada arduino, LED disambungkan ke pin digital (1 - 13) dan diinsialisasikan sebagai OUTPUT pada void setup. Untuk menyalakan LED kita menggunakan _syntax_ ```cpp digitalWrite``` dengan HIGH (1) untuk menyalakan dan LOW (0) untuk mematikan. Perhatikan kode dibawah ini ::
+Pada arduino, LED disambungkan ke pin digital (1 - 13) dan diinsialisasikan sebagai OUTPUT pada void setup. Untuk menyalakan LED kita menggunakan _syntax_ ```digitalWrite``` dengan HIGH (1) untuk menyalakan dan LOW (0) untuk mematikan. Perhatikan kode dibawah ini ::
 ```cpp
 void setup () {
   pinMode(1, OUTPUT); //menginisialisi LED yang digunakan
@@ -61,7 +61,7 @@ void loop () {
 ---
 
 ### Penggunaan For dan Array pada Syntax
-Jika kita menggunakana banyak LED, kode yang kita ahsilkan pasti akan panjang. Kita bisa memanfaatkan _syntax_ ```cpp for``` dan _array_ untuk memperpendek kode kita. Perhatikaan kode dibawah ini :
+Jika kita menggunakana banyak LED, kode yang kita ahsilkan pasti akan panjang. Kita bisa memanfaatkan _syntax_ ```for``` dan _array_ untuk memperpendek kode kita. Perhatikaan kode dibawah ini :
 ```cpp
 int leds[] = {2, 3, 4}; //nilai dalam kurung kurva diisi dengan pin LED apa saja yang kita pakai
 
